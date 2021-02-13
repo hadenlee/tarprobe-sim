@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'java-library-distribution'
+
+sourceCompatibility = '1.8'
+mainClassName = 'edu.usfca.cs673.Main'
+version = 'f20.labs'
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+dependencies {
+    // test
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.hamcrest:hamcrest:2.1'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs "src/main/java"
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test/java'
+        }
+    }
+}
+
+test {
+    testLogging {
+        exceptionFormat = 'full'
+    }
+}
