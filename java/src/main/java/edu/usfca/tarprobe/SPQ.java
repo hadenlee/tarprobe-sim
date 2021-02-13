@@ -9,12 +9,14 @@ public class SPQ {
     Lo, Hi;
   }
 
+
   class Packet {
     public Type type;
     Integer arrivalTime, timeToProcess;
     boolean ofInterest;
 
-    private Packet() {}
+    private Packet() {
+    }
 
     public Packet(int t, int ttp) {
       arrivalTime = t;
@@ -23,7 +25,7 @@ public class SPQ {
     }
   }
 
-  public void simulate(Type typePOI, int maxT) {
+  public void simulate(Type typePOI, int maxT, boolean verbose) {
     Map<Type, PriorityQueue<Packet>> pq = new HashMap<>();
     for (Type type : Type.values()) {
       pq.put(type, new PriorityQueue<>(10, (a, b) -> (a.arrivalTime).compareTo(b.arrivalTime)));
@@ -36,7 +38,7 @@ public class SPQ {
     final Type typeAntiPOI = typePOI == Type.Hi ? Type.Lo : Type.Hi;
 
     Packet current = null;
-    int cntReceivedPOI = 0, cntLostPOI = 0, cntProcessedPOI = 0;
+    int cntArrivedPOI = 0, cntLostPOI = 0, cntProcessedPOI = 0;
     for (int t = 1; t <= maxT; t++) {
       // -------------------------------------------------------------------
       // A new packet arrives at time t.
@@ -47,20 +49,23 @@ public class SPQ {
         if ((t - initTrain) % GROUP_LENGTH == 0) {
           p.type = typePOI;
           p.ofInterest = true; // <- This is a "tagged" packet, we want to calculate the loss rate of.
-          cntReceivedPOI++;
+          cntArrivedPOI++;
         } else {
           p.type = typeAntiPOI;
         }
       }
-      System.out.format("Time: %2d -> Packet (%s): ", p.arrivalTime, p.type);
+      if (verbose)
+        System.out.format("Time: %2d -> Packet (%s): ", p.arrivalTime, p.type);
       // -------------------------------------------------------------------
       if (pq.get(p.type).size() == CAPACITY) {
-        System.out.format("  This packet is lost.\n");
+        if (verbose)
+          System.out.format("  This packet is lost.\n");
         if (p.ofInterest)
           cntLostPOI++;
       } else {
         pq.get(p.type).add(p);
-        System.out.format("  This packet is added to the queue (now queue size = %d).\n", pq.get(p.type).size());
+        if (verbose)
+          System.out.format("  This packet is added to the queue (now queue size = %d).\n", pq.get(p.type).size());
       }
       if (current == null) {
         if (pq.get(Type.Hi).size() > 0) { // peek High packet.
@@ -76,19 +81,22 @@ public class SPQ {
           if (current.ofInterest)
             cntProcessedPOI++;
           pq.get(current.type).poll();
-          System.out.format("Packet (%s at %2d) has been processed. Removed from queue.\n", current.type,
+          if (verbose)
+            System.out.format("Packet (%s at %2d) has been processed. Removed from queue.\n", current.type,
               current.arrivalTime);
           current = null;
         } else {
-          System.out.format("Packet (%s at %2d) needs %d more ticks to process.\n", current.type, current.arrivalTime,
+          if (verbose)
+            System.out.format("Packet (%s at %2d) needs %d more ticks to process.\n", current.type, current.arrivalTime,
               current.timeToProcess);
         }
       }
-      System.out.format("\n");
+      if (verbose)
+        System.out.format("\n");
     }
-    System.out.format("POI Summary: %d received, %d lost, %d processed, %d still in queue (loss rate %3d%% - %3d%%)\n",
-        cntReceivedPOI, cntLostPOI, cntProcessedPOI, cntReceivedPOI - cntLostPOI - cntProcessedPOI, //
-        cntLostPOI * 100 / cntReceivedPOI, (cntReceivedPOI - cntProcessedPOI) * 100 / cntReceivedPOI);
-
+    System.out
+      .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\n",
+        cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
+        cntLostPOI * 100 / cntArrivedPOI, (cntArrivedPOI - cntProcessedPOI) * 100 / cntArrivedPOI);
   }
 }
