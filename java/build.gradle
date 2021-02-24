@@ -3,8 +3,7 @@ apply plugin: 'application'
 apply plugin: 'java-library-distribution'
 
 sourceCompatibility = '1.8'
-mainClassName = 'edu.usfca.cs673.Main'
-version = 'f20.labs'
+mainClassName = 'edu.usfca.tarprobe.Main'
 
 repositories {
     mavenCentral()
@@ -17,6 +16,9 @@ buildscript {
 }
 
 dependencies {
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    implementation group: 'com.google.guava', name: 'guava', version: '30.1-jre'
+
     // test
     testCompile 'junit:junit:4.12'
     testCompile 'org.hamcrest:hamcrest:2.1'

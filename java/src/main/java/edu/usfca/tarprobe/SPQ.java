@@ -1,8 +1,13 @@
 package edu.usfca.tarprobe;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class SPQ {
   public enum Type {
@@ -25,20 +30,63 @@ public class SPQ {
     }
   }
 
+
+  class State {
+    int position, hq_size, lq_size, timeToProcess;
+    boolean newPacketPOI;
+    Type currentType, newPacketType;
+
+    public State(int position, Type newPacketType, boolean newPacketPOI, int hq_size, int lq_size, int timeToProcess,
+      Type currentType) {
+      this.position = position;
+      this.newPacketType = newPacketType;
+      this.newPacketPOI = newPacketPOI;
+      this.hq_size = hq_size;
+      this.lq_size = lq_size;
+      this.timeToProcess = timeToProcess;
+      this.currentType = currentType;
+    }
+
+    @Override public String toString() {
+      return String.format("Position (%2d) Packet (%s %d) HQ (%2d) LQ (%2d) Current(%2d / %s)",//
+        position, newPacketType.name(), newPacketPOI ? 1 : 0, hq_size, lq_size, timeToProcess,
+        timeToProcess >= 0 ? currentType.name() : "--");
+    }
+
+    @Override public boolean equals(Object o) {
+      if (this == o)
+        return true;
+      if (o == null || getClass() != o.getClass())
+        return false;
+      State state = (State) o;
+      return position == state.position && hq_size == state.hq_size && lq_size == state.lq_size
+        && timeToProcess == state.timeToProcess && newPacketPOI == state.newPacketPOI
+        && currentType == state.currentType && newPacketType == state.newPacketType;
+    }
+
+    @Override public int hashCode() {
+      return com.google.common.base.Objects
+        .hashCode(position, hq_size, lq_size, timeToProcess, newPacketPOI, currentType, newPacketType);
+    }
+  }
+
   public void simulate(Type typePOI, int maxT, boolean verbose) {
     Map<Type, PriorityQueue<Packet>> pq = new HashMap<>();
     for (Type type : Type.values()) {
       pq.put(type, new PriorityQueue<>(10, (a, b) -> (a.arrivalTime).compareTo(b.arrivalTime)));
     }
 
-    final int initTrain = 3;
-    final int CAPACITY = 2;
-    final int GROUP_LENGTH = 3;
-    final int TIME_TO_PROCESS = 2;
+    final int initTrain = 3; // n_I: Initial # of High packets
+    final int Q_CAPACITY = 2; // Q: Capacity of each queue
+    final int GROUP_LENGTH = 3; // This is equal to (N' + 1).
+    final int TIME_TO_PROCESS = 2; // This is (1 / Z) assuming that r = 1.
     final Type typeAntiPOI = typePOI == Type.Hi ? Type.Lo : Type.Hi;
 
     Packet current = null;
     int cntArrivedPOI = 0, cntLostPOI = 0, cntProcessedPOI = 0;
+
+    Map<State, List<Integer>> history = new HashMap<>();
+    Set<Integer> periods = new TreeSet<>();
     for (int t = 1; t <= maxT; t++) {
       // -------------------------------------------------------------------
       // A new packet arrives at time t.
@@ -54,10 +102,23 @@ public class SPQ {
           p.type = typeAntiPOI;
         }
       }
-      if (verbose)
-        System.out.format("Time: %2d -> Packet (%s): ", p.arrivalTime, p.type);
+      State st = new State(t <= initTrain ? -t : (t - initTrain) % GROUP_LENGTH, //
+        p.type, p.ofInterest,//
+        pq.get(Type.Hi).size(),//
+        pq.get(Type.Lo).size(),//
+        current == null ? -1 : current.timeToProcess, current == null ? null : current.type);
+      if (verbose) {
+        history.putIfAbsent(st, new ArrayList<>());
+        List<Integer> list = history.get(st);
+        list.add(t);
+        if (list.size() > 1) {
+          periods.add(list.get(list.size() - 1) - list.get(list.size() - 2));
+        }
+        System.out
+          .format("Time: %2d -> Packet (%s): %s  [%s]", t, p.type, st, Arrays.toString(history.get(st).toArray()));
+      }
       // -------------------------------------------------------------------
-      if (pq.get(p.type).size() == CAPACITY) {
+      if (pq.get(p.type).size() == Q_CAPACITY) {
         if (verbose)
           System.out.format("  This packet is lost.\n");
         if (p.ofInterest)
@@ -98,5 +159,6 @@ public class SPQ {
       .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\n",
         cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
         cntLostPOI * 100 / cntArrivedPOI, (cntArrivedPOI - cntProcessedPOI) * 100 / cntArrivedPOI);
+    System.out.format("   Period(s) found: %s\n\n", Arrays.toString(periods.toArray()));
   }
 }
