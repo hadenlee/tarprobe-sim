@@ -70,16 +70,40 @@ public class SPQ {
     }
   }
 
-  public void simulate(Type typePOI, int maxT, boolean verbose) {
+
+  static class Summary {
+    final int arrived, lost, proecssed, inQueue;
+
+    public Summary(int arrived, int lost, int processed, int inQueue) {
+      this.arrived = arrived;
+      this.lost = lost;
+      this.proecssed = processed;
+      this.inQueue = inQueue;
+    }
+  }
+
+
+  static class Params {
+    final int initTrain; // n_I: Initial # of High packets
+    final int Q_CAPACITY; // Q: Capacity of each queue
+    final int GROUP_LENGTH; // This is equal to (N' + 1).
+    final int TIME_TO_PROCESS; // This is (1 / Z) assuming that r = 1.
+
+    public Params(int initTrain, int qCap, int groupLen, int ttp) {
+      this.initTrain = initTrain;
+      this.Q_CAPACITY = qCap;
+      this.GROUP_LENGTH = groupLen;
+      this.TIME_TO_PROCESS = ttp;
+    }
+
+  }
+
+  public Summary simulate(Params params, Type typePOI, int maxT, boolean verbose) {
     Map<Type, PriorityQueue<Packet>> pq = new HashMap<>();
     for (Type type : Type.values()) {
       pq.put(type, new PriorityQueue<>(10, (a, b) -> (a.arrivalTime).compareTo(b.arrivalTime)));
     }
 
-    final int initTrain = 3; // n_I: Initial # of High packets
-    final int Q_CAPACITY = 2; // Q: Capacity of each queue
-    final int GROUP_LENGTH = 3; // This is equal to (N' + 1).
-    final int TIME_TO_PROCESS = 2; // This is (1 / Z) assuming that r = 1.
     final Type typeAntiPOI = typePOI == Type.Hi ? Type.Lo : Type.Hi;
 
     Packet current = null;
@@ -90,11 +114,11 @@ public class SPQ {
     for (int t = 1; t <= maxT; t++) {
       // -------------------------------------------------------------------
       // A new packet arrives at time t.
-      Packet p = new Packet(t, TIME_TO_PROCESS);
-      if (t <= initTrain) {
+      Packet p = new Packet(t, params.TIME_TO_PROCESS);
+      if (t <= params.initTrain) {
         p.type = Type.Hi; // Initial train is always of high type.
       } else {
-        if ((t - initTrain) % GROUP_LENGTH == 0) {
+        if ((t - params.initTrain) % params.GROUP_LENGTH == 0) {
           p.type = typePOI;
           p.ofInterest = true; // <- This is a "tagged" packet, we want to calculate the loss rate of.
           cntArrivedPOI++;
@@ -102,7 +126,7 @@ public class SPQ {
           p.type = typeAntiPOI;
         }
       }
-      State st = new State(t <= initTrain ? -t : (t - initTrain) % GROUP_LENGTH, //
+      State st = new State(t <= params.initTrain ? -t : (t - params.initTrain) % params.GROUP_LENGTH, //
         p.type, p.ofInterest,//
         pq.get(Type.Hi).size(),//
         pq.get(Type.Lo).size(),//
@@ -118,7 +142,7 @@ public class SPQ {
           .format("Time: %2d -> Packet (%s): %s  [%s]", t, p.type, st, Arrays.toString(history.get(st).toArray()));
       }
       // -------------------------------------------------------------------
-      if (pq.get(p.type).size() == Q_CAPACITY) {
+      if (pq.get(p.type).size() == params.Q_CAPACITY) {
         if (verbose)
           System.out.format("  This packet is lost.\n");
         if (p.ofInterest)
@@ -156,9 +180,10 @@ public class SPQ {
         System.out.format("\n");
     }
     System.out
-      .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\n",
+      .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\t",
         cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
         cntLostPOI * 100 / cntArrivedPOI, (cntArrivedPOI - cntProcessedPOI) * 100 / cntArrivedPOI);
     System.out.format("   Period(s) found: %s\n\n", Arrays.toString(periods.toArray()));
+    return new Summary(cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI);
   }
 }
