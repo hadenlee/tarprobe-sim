@@ -1,5 +1,7 @@
 package edu.usfca.tarprobe;
 
+import com.sun.tools.javac.util.Pair;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -79,6 +81,10 @@ public class SPQ {
       this.lost = lost;
       this.proecssed = processed;
       this.inQueue = inQueue;
+    }
+
+    Pair<Integer, Integer> getLossRate() {
+      return Pair.of(lost * 100 / arrived, (arrived - proecssed) * 100 / arrived);
     }
   }
 
