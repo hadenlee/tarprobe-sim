@@ -1,5 +1,6 @@
 package edu.usfca.tarprobe;
 
+import com.google.common.base.Objects;
 import com.sun.tools.javac.util.Pair;
 
 import java.util.ArrayList;
@@ -34,20 +35,34 @@ public class SPQ {
   }
 
 
-  class State {
+  static class State {
     int position, hq_size, lq_size, timeToProcess;
+    List<Integer> hq_poi_index, lq_poi_index;
     boolean newPacketPOI;
     Type currentType, newPacketType;
 
-    public State(int position, Type newPacketType, boolean newPacketPOI, int hq_size, int lq_size, int timeToProcess,
-      Type currentType) {
+    public State(int position, Type newPacketType, boolean newPacketPOI, Queue<Packet> hq, Queue<Packet> lq,
+      int timeToProcess, Type currentType) {
       this.position = position;
       this.newPacketType = newPacketType;
       this.newPacketPOI = newPacketPOI;
-      this.hq_size = hq_size;
-      this.lq_size = lq_size;
+      this.hq_size = hq.size();
+      this.hq_poi_index = getPOIVector(hq);
+      this.lq_size = lq.size();
+      this.lq_poi_index = getPOIVector(lq);
       this.timeToProcess = timeToProcess;
       this.currentType = currentType;
+    }
+
+    static List<Integer> getPOIVector(Queue<Packet> qu) {
+      List<Integer> arr = new ArrayList<>();
+      int index = 0;
+      for (Packet p : qu) {
+        index++;
+        if (p.ofInterest)
+          arr.add(index);
+      }
+      return arr;
     }
 
     @Override public String toString() {
@@ -59,17 +74,19 @@ public class SPQ {
     @Override public boolean equals(Object o) {
       if (this == o)
         return true;
-      if (o == null || getClass() != o.getClass())
+      if (!(o instanceof State))
         return false;
       State state = (State) o;
       return position == state.position && hq_size == state.hq_size && lq_size == state.lq_size
-        && timeToProcess == state.timeToProcess && newPacketPOI == state.newPacketPOI
+        && timeToProcess == state.timeToProcess && newPacketPOI == state.newPacketPOI && Objects
+        .equal(hq_poi_index, state.hq_poi_index) && Objects.equal(lq_poi_index, state.lq_poi_index)
         && currentType == state.currentType && newPacketType == state.newPacketType;
     }
 
     @Override public int hashCode() {
-      return com.google.common.base.Objects
-        .hashCode(position, hq_size, lq_size, timeToProcess, newPacketPOI, currentType, newPacketType);
+      return Objects
+        .hashCode(position, hq_size, lq_size, timeToProcess, hq_poi_index, lq_poi_index, newPacketPOI, currentType,
+          newPacketType);
     }
   }
 
@@ -124,8 +141,8 @@ public class SPQ {
   private State getCurrentState(int t, Packet p, Params params, Map<Type, Queue<Packet>> pq, Packet current) {
     State st = new State(t <= params.initTrain ? -t : (t - params.initTrain) % params.GROUP_LENGTH, //
       p.type, p.ofInterest,//
-      pq.get(Type.Hi).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
-      pq.get(Type.Lo).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
+      pq.get(Type.Hi),//
+      pq.get(Type.Lo),//
       current == null ? -1 : current.timeToProcess, current == null ? null : current.type);
     return st;
   }
@@ -203,7 +220,7 @@ public class SPQ {
       if (verbose)
         System.out.format("\n");
     }
-    
+
     System.out
       .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\t",
         cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
