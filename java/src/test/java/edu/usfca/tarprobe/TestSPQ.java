@@ -69,4 +69,137 @@ public class TestSPQ {
       // ---------------------------
     }
   }
+
+  @Test public void testPlot1() {
+    // Using the following parameters (plot 1):
+    // r = 10, Z = 2 (hence r/Z = time-to-process = 5)
+    // Q = 75 (both queues)
+    // N' = 3 (hence each group length is 4)
+    // n_I = 150 (number of packets in init packet train)
+    SPQ instance = new SPQ();
+    Params params = new Params(150, 75, 4, 5);
+
+    {
+      int M = 100;
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(100, summaryHi.arrived);
+      assertEquals(20, summaryHi.lost);
+      assertEquals(6, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(100, summaryLo.arrived);
+      assertEquals(25, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+
+    {
+      int M = 1000;
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(1000, summaryHi.arrived);
+      assertEquals(200, summaryHi.lost);
+      assertEquals(726, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(1000, summaryLo.arrived);
+      assertEquals(925, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+
+    {
+      int M = 5000;
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(5000, summaryHi.arrived);
+      assertEquals(1000, summaryHi.lost);
+      assertEquals(3926, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(5000, summaryLo.arrived);
+      assertEquals(4925, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+
+    {
+      int M = 10000;
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(10000, summaryHi.arrived);
+      assertEquals(2000, summaryHi.lost);
+      assertEquals(7926, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(10000, summaryLo.arrived);
+      assertEquals(9925, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+  }
+
+  @Test public void testPlot2() {
+    // Using the following parameters (plot 2):
+    // r = 10, Z = 2 (hence r/Z = time-to-process = 5)
+    // Q = 75 (both queues)
+    // N' = 1, 2, 5, 10
+    // n_I = 150 (number of packets in init packet train)
+    // M = 500 (# of groups)
+    SPQ instance = new SPQ();
+    final int M = 500;
+
+    {
+      Params params = new Params(150, 75, 1 + 1, 5);
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryHi.arrived);
+      assertEquals(300, summaryHi.lost);
+      assertEquals(126, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryLo.arrived);
+      assertEquals(425, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+
+    {
+      Params params = new Params(150, 75, 2 + 1, 5);
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryHi.arrived);
+      assertEquals(200, summaryHi.lost);
+      assertEquals(226, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryLo.arrived);
+      assertEquals(425, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+
+    {
+      Params params = new Params(150, 75, 5 + 1, 5);
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryHi.arrived);
+      assertEquals(0, summaryHi.lost);
+      assertEquals(499, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryLo.arrived);
+      assertEquals(425, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+
+    {
+      Params params = new Params(150, 75, 10 + 1, 5);
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryHi.arrived);
+      assertEquals(0, summaryHi.lost);
+      assertEquals(499, summaryHi.proecssed);
+
+      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      assertEquals(500, summaryLo.arrived);
+      assertEquals(425, summaryLo.lost);
+      assertEquals(0, summaryLo.proecssed);
+      // ---------------------------
+    }
+  }
 }
