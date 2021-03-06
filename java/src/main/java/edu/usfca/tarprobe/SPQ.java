@@ -75,17 +75,17 @@ public class SPQ {
 
 
   static class Summary {
-    final int arrived, lost, proecssed, inQueue;
+    final int arrived, lost, processed, inQueue;
 
     public Summary(int arrived, int lost, int processed, int inQueue) {
       this.arrived = arrived;
       this.lost = lost;
-      this.proecssed = processed;
+      this.processed = processed;
       this.inQueue = inQueue;
     }
 
     Pair<Integer, Integer> getLossRate() {
-      return Pair.of(lost * 100 / arrived, (arrived - proecssed) * 100 / arrived);
+      return Pair.of(lost * 100 / arrived, (arrived - processed) * 100 / arrived);
     }
   }
 
@@ -104,13 +104,51 @@ public class SPQ {
     }
   }
 
+  private Packet getNext(int t, Params params, Type typePOI) {
+    final Type typeAntiPOI = typePOI == Type.Hi ? Type.Lo : Type.Hi;
+    // A new packet arrives at time t.
+    Packet p = new Packet(t, params.TIME_TO_PROCESS);
+    if (t <= params.initTrain) {
+      p.type = Type.Hi; // Initial train is always of high type.
+    } else {
+      if ((t - params.initTrain) % params.GROUP_LENGTH == 0) {
+        p.type = typePOI;
+        p.ofInterest = true; // <- This is a "tagged" packet, we want to calculate the loss rate of.
+      } else {
+        p.type = typeAntiPOI;
+      }
+    }
+    return p;
+  }
+
+  private State getCurrentState(int t, Packet p, Params params, Map<Type, Queue<Packet>> pq, Packet current) {
+    State st = new State(t <= params.initTrain ? -t : (t - params.initTrain) % params.GROUP_LENGTH, //
+      p.type, p.ofInterest,//
+      pq.get(Type.Hi).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
+      pq.get(Type.Lo).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
+      current == null ? -1 : current.timeToProcess, current == null ? null : current.type);
+    return st;
+  }
+
+  private void checkPeriod(int t, State st, Packet p, Map<State, List<Integer>> history, Set<Integer> periods,
+    boolean verbose) {
+    history.putIfAbsent(st, new ArrayList<>());
+    List<Integer> list = history.get(st);
+    list.add(t);
+    if (list.size() > 1) {
+      periods.add(list.get(list.size() - 1) - list.get(list.size() - 2));
+    }
+    if (verbose) {
+      System.out
+        .format("Time: %2d -> Packet (%s): %s  [%s]", t, p.type, st, Arrays.toString(history.get(st).toArray()));
+    }
+  }
+
   public Summary simulate(Params params, Type typePOI, int maxT, boolean verbose) {
     Map<Type, Queue<Packet>> pq = new HashMap<>();
     for (Type type : Type.values()) {
       pq.put(type, new LinkedList<>());
     }
-
-    final Type typeAntiPOI = typePOI == Type.Hi ? Type.Lo : Type.Hi;
 
     Packet current = null;
     int cntArrivedPOI = 0, cntLostPOI = 0, cntProcessedPOI = 0;
@@ -119,35 +157,14 @@ public class SPQ {
     Set<Integer> periods = new TreeSet<>();
     for (int t = 1; t <= maxT; t++) {
       // -------------------------------------------------------------------
-      // A new packet arrives at time t.
-      Packet p = new Packet(t, params.TIME_TO_PROCESS);
-      if (t <= params.initTrain) {
-        p.type = Type.Hi; // Initial train is always of high type.
-      } else {
-        if ((t - params.initTrain) % params.GROUP_LENGTH == 0) {
-          p.type = typePOI;
-          p.ofInterest = true; // <- This is a "tagged" packet, we want to calculate the loss rate of.
-          cntArrivedPOI++;
-        } else {
-          p.type = typeAntiPOI;
-        }
-      }
-      State st = new State(t <= params.initTrain ? -t : (t - params.initTrain) % params.GROUP_LENGTH, //
-        p.type, p.ofInterest,//
-        pq.get(Type.Hi).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
-        pq.get(Type.Lo).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
-        current == null ? -1 : current.timeToProcess, current == null ? null : current.type);
+      final Packet p = getNext(t, params, typePOI);
+      if (p.ofInterest)
+        cntArrivedPOI++;
 
-      history.putIfAbsent(st, new ArrayList<>());
-      List<Integer> list = history.get(st);
-      list.add(t);
-      if (list.size() > 1) {
-        periods.add(list.get(list.size() - 1) - list.get(list.size() - 2));
-      }
-      if (verbose) {
-        System.out
-          .format("Time: %2d -> Packet (%s): %s  [%s]", t, p.type, st, Arrays.toString(history.get(st).toArray()));
-      }
+      // -------------------------------------------------------------------
+      final State st = getCurrentState(t, p, params, pq, current);
+      checkPeriod(t, st, p, history, periods, verbose);
+
       // -------------------------------------------------------------------
       if (pq.get(p.type).size() == params.Q_CAPACITY) {
         if (verbose)
@@ -186,6 +203,7 @@ public class SPQ {
       if (verbose)
         System.out.format("\n");
     }
+    
     System.out
       .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\t",
         cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
