@@ -93,16 +93,22 @@ public class SPQ {
 
   static class Summary {
     final int arrived, lost, processed, inQueue;
+    final Set<Integer> periods;
 
-    public Summary(int arrived, int lost, int processed, int inQueue) {
+    public Summary(int arrived, int lost, int processed, int inQueue, Set<Integer> periods) {
       this.arrived = arrived;
       this.lost = lost;
       this.processed = processed;
       this.inQueue = inQueue;
+      this.periods = new TreeSet<>(periods);
     }
 
     Pair<Integer, Integer> getLossRate() {
       return Pair.of(lost * 100 / arrived, (arrived - processed) * 100 / arrived);
+    }
+
+    int getSmallestPeriod() {
+      return periods.iterator().next();
     }
   }
 
@@ -226,6 +232,7 @@ public class SPQ {
         cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
         cntLostPOI * 100 / cntArrivedPOI, (cntArrivedPOI - cntProcessedPOI) * 100 / cntArrivedPOI);
     System.out.format("   Period(s) found: %s\n\n", Arrays.toString(periods.toArray()));
-    return new Summary(cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI);
+    return new Summary(cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI,
+      periods);
   }
 }

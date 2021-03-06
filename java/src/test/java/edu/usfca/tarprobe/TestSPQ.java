@@ -22,11 +22,13 @@ public class TestSPQ {
       assertEquals(7, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(6, summaryHi.processed);
+      assertEquals(6, summaryHi.getSmallestPeriod());
 
       Summary summaryLo = instance.simulate(params, Type.Lo, 25, false);
       assertEquals(7, summaryLo.arrived);
       assertEquals(5, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+      assertEquals(6, summaryLo.getSmallestPeriod());
       // --------------------------- The values above had been verified manually.
     }
 
@@ -35,11 +37,13 @@ public class TestSPQ {
       assertEquals(82, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(82, summaryHi.processed);
+      assertEquals(6, summaryHi.getSmallestPeriod());
 
       Summary summaryLo = instance.simulate(params, Type.Lo, 250, false);
       assertEquals(82, summaryLo.arrived);
       assertEquals(80, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+      assertEquals(6, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -48,11 +52,13 @@ public class TestSPQ {
       assertEquals(83, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(82, summaryHi.processed);
+      assertEquals(6, summaryHi.getSmallestPeriod());
 
       Summary summaryLo = instance.simulate(params, Type.Lo, 252, false);
       assertEquals(83, summaryLo.arrived);
       assertEquals(81, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+      assertEquals(6, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -61,11 +67,13 @@ public class TestSPQ {
       assertEquals(84, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(83, summaryHi.processed);
+      assertEquals(6, summaryHi.getSmallestPeriod());
 
       Summary summaryLo = instance.simulate(params, Type.Lo, 255, false);
       assertEquals(84, summaryLo.arrived);
       assertEquals(82, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+      assertEquals(6, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
   }
@@ -90,6 +98,9 @@ public class TestSPQ {
       assertEquals(100, summaryLo.arrived);
       assertEquals(25, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(20, summaryHi.getSmallestPeriod());
+      assertEquals(20, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -104,6 +115,9 @@ public class TestSPQ {
       assertEquals(1000, summaryLo.arrived);
       assertEquals(925, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(20, summaryHi.getSmallestPeriod());
+      assertEquals(20, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -118,6 +132,9 @@ public class TestSPQ {
       assertEquals(5000, summaryLo.arrived);
       assertEquals(4925, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(20, summaryHi.getSmallestPeriod());
+      assertEquals(20, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -132,6 +149,9 @@ public class TestSPQ {
       assertEquals(10000, summaryLo.arrived);
       assertEquals(9925, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(20, summaryHi.getSmallestPeriod());
+      assertEquals(20, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
   }
@@ -157,6 +177,9 @@ public class TestSPQ {
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(10, summaryHi.getSmallestPeriod());
+      assertEquals(10, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -171,6 +194,9 @@ public class TestSPQ {
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(15, summaryHi.getSmallestPeriod());
+      assertEquals(15, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -185,6 +211,9 @@ public class TestSPQ {
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(30, summaryHi.getSmallestPeriod());
+      assertEquals(30, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
 
@@ -199,6 +228,9 @@ public class TestSPQ {
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
+
+      assertEquals(55, summaryHi.getSmallestPeriod());
+      assertEquals(55, summaryLo.getSmallestPeriod());
       // ---------------------------
     }
   }
