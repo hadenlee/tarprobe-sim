@@ -207,7 +207,8 @@ public class qSPQ {
       // -------------------------------------------------------------------
       final State st = getCurrentState(t, p, params, pq, current);
       checkPeriod(t, st, p, history, periods, verbose);
-
+      // TODO: Now state has to taken "packet types" into account due to probabilistic nature.
+      // More refactoring to come.
       // -------------------------------------------------------------------
       Type targetType;
       final double prob = params.getProb(p.type);
