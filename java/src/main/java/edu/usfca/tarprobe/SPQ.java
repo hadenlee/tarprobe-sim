@@ -5,9 +5,10 @@ import com.sun.tools.javac.util.Pair;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -101,13 +102,12 @@ public class SPQ {
       this.GROUP_LENGTH = groupLen;
       this.TIME_TO_PROCESS = ttp;
     }
-
   }
 
   public Summary simulate(Params params, Type typePOI, int maxT, boolean verbose) {
-    Map<Type, PriorityQueue<Packet>> pq = new HashMap<>();
+    Map<Type, Queue<Packet>> pq = new HashMap<>();
     for (Type type : Type.values()) {
-      pq.put(type, new PriorityQueue<>(10, (a, b) -> (a.arrivalTime).compareTo(b.arrivalTime)));
+      pq.put(type, new LinkedList<>());
     }
 
     final Type typeAntiPOI = typePOI == Type.Hi ? Type.Lo : Type.Hi;
@@ -134,16 +134,17 @@ public class SPQ {
       }
       State st = new State(t <= params.initTrain ? -t : (t - params.initTrain) % params.GROUP_LENGTH, //
         p.type, p.ofInterest,//
-        pq.get(Type.Hi).size(),//
-        pq.get(Type.Lo).size(),//
+        pq.get(Type.Hi).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
+        pq.get(Type.Lo).size(),// TODO: 0-1 vector of Queue is needed since each packet may be of POI or not
         current == null ? -1 : current.timeToProcess, current == null ? null : current.type);
+
+      history.putIfAbsent(st, new ArrayList<>());
+      List<Integer> list = history.get(st);
+      list.add(t);
+      if (list.size() > 1) {
+        periods.add(list.get(list.size() - 1) - list.get(list.size() - 2));
+      }
       if (verbose) {
-        history.putIfAbsent(st, new ArrayList<>());
-        List<Integer> list = history.get(st);
-        list.add(t);
-        if (list.size() > 1) {
-          periods.add(list.get(list.size() - 1) - list.get(list.size() - 2));
-        }
         System.out
           .format("Time: %2d -> Packet (%s): %s  [%s]", t, p.type, st, Arrays.toString(history.get(st).toArray()));
       }

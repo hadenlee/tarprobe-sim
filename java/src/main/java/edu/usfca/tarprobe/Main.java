@@ -1,7 +1,5 @@
 package edu.usfca.tarprobe;
 
-
-
 import edu.usfca.tarprobe.SPQ.Params;
 import edu.usfca.tarprobe.SPQ.Summary;
 
