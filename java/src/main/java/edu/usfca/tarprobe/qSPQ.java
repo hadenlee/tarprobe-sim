@@ -1,7 +1,7 @@
 package edu.usfca.tarprobe;
 
 import com.google.common.base.Objects;
-import com.sun.tools.javac.util.Pair;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
 import java.util.Arrays;

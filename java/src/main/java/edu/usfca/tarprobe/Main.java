@@ -24,8 +24,8 @@ public class Main {
         10000}) {
         Summary s1 = ins.simulate(params, SPQ.Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
         Summary s2 = ins.simulate(params, SPQ.Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
-        expResult.add(String.format("%d,%d,%d,%d,%d", M, s1.getLossRate().fst, s2.getLossRate().fst,//
-          s1.getLossRate().snd, s2.getLossRate().snd));
+        expResult.add(String.format("%d,%d,%d,%d,%d", M, s1.getLossRate().getLeft(), s2.getLossRate().getLeft(),//
+          s1.getLossRate().getRight(), s2.getLossRate().getRight()));
       }
       System.out.format("%s\n\n", String.join("\n", expResult));
     }
@@ -39,8 +39,8 @@ public class Main {
 
         Summary s1 = ins.simulate(params, SPQ.Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
         Summary s2 = ins.simulate(params, SPQ.Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
-        expResult.add(String.format("%d,%d,%d,%d,%d", np, s1.getLossRate().fst, s2.getLossRate().fst,//
-          s1.getLossRate().snd, s2.getLossRate().snd));
+        expResult.add(String.format("%d,%d,%d,%d,%d", np, s1.getLossRate().getLeft(), s2.getLossRate().getLeft(),//
+          s1.getLossRate().getRight(), s2.getLossRate().getRight()));
       }
       System.out.format("%s\n\n", String.join("\n", expResult));
     }
@@ -56,9 +56,9 @@ public class Main {
 
           Summary s1 = ins.simulate(params, SPQ.Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
           Summary s2 = ins.simulate(params, SPQ.Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
-          expResult
-            .add(String.format("%.1f,%d,%d,%d,%d", (double) 10. / ttp, s1.getLossRate().fst, s2.getLossRate().fst,//
-              s1.getLossRate().snd, s2.getLossRate().snd));
+          expResult.add(String
+            .format("%.1f,%d,%d,%d,%d", (double) 10. / ttp, s1.getLossRate().getLeft(), s2.getLossRate().getLeft(),//
+              s1.getLossRate().getRight(), s2.getLossRate().getRight()));
         }
         System.out.format("%s\n\n", String.join("\n", expResult));
         System.out.format("================[Done N' = %d]\n", np);
