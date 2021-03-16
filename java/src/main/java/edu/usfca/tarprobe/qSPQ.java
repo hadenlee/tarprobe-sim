@@ -139,14 +139,24 @@ public class qSPQ {
     final int Q_CAPACITY; // Q: Capacity of each queue
     final int GROUP_LENGTH; // This is equal to (N' + 1).
     final int TIME_TO_PROCESS; // This is (1 / Z) assuming that r = 1.
-    final double probH = 1.0; // This defines probability of "sticking to the plan" for H packets
-    final double probL = 1.0; // This defines probability of "sticking to the plan" for L packets
+    final double probH; // This defines probability of "sticking to the plan" for H packets
+    final double probL; // This defines probability of "sticking to the plan" for L packets
 
     public Params(int initTrain, int qCap, int groupLen, int ttp) {
       this.initTrain = initTrain;
       this.Q_CAPACITY = qCap;
       this.GROUP_LENGTH = groupLen;
       this.TIME_TO_PROCESS = ttp;
+      this.probH = this.probL = 1.0;
+    }
+
+    public Params(int initTrain, int qCap, int groupLen, int ttp, double pH, double pL) {
+      this.initTrain = initTrain;
+      this.Q_CAPACITY = qCap;
+      this.GROUP_LENGTH = groupLen;
+      this.TIME_TO_PROCESS = ttp;
+      this.probH = pH;
+      this.probL = pL;
     }
 
     public double getProb(Type t) {
@@ -182,12 +192,14 @@ public class qSPQ {
     return p;
   }
 
-  private State getCurrentState(int t, Packet p, Params params, Map<Type, Queue<Packet>> pq, Packet current) {
+  private State getCurrentState(int t, Packet p, Params params, Map<Type, Queue<Packet>> pq, Queue<Packet> currentQ) {
     State st = new State(t <= params.initTrain ? -t : (t - params.initTrain) % params.GROUP_LENGTH, //
       p.type, p.ofInterest,//
       pq.get(Type.Hi),//
       pq.get(Type.Lo),//
-      current == null ? -1 : current.timeToProcess, current == null ? null : current.type);
+      currentQ == null ? -1 : currentQ.peek().timeToProcess, //
+      currentQ == null ? null : currentQ.peek().type //
+    );
     return st;
   }
 
@@ -205,13 +217,20 @@ public class qSPQ {
     }
   }
 
-  public Summary simulate(Params params, Type typePOI, int maxT, boolean verbose) {
+  // ------------------------------------------------------------------------------------------------------
+  // This runs the simulation once.
+  public Summary simulateOnce(Params params, Type typePOI, int maxT, boolean verbose) {
+    return simulateOnce(params, typePOI, maxT, verbose, false);
+  }
+
+  public Summary simulateOnce(Params params, Type typePOI, int maxT, boolean verbose, boolean suppress) {
     Map<Type, Queue<Packet>> pq = new HashMap<>();
     for (Type type : Type.values()) {
       pq.put(type, new LinkedList<>());
     }
 
-    Packet current = null;
+
+    Queue<Packet> currentQ = null;
     int cntArrivedPOI = 0, cntLostPOI = 0, cntProcessedPOI = 0;
 
     Map<State, List<Integer>> history = new HashMap<>();
@@ -225,7 +244,7 @@ public class qSPQ {
         cntArrivedPOI++;
 
       // -------------------------------------------------------------------
-      final State st = getCurrentState(t, p, params, pq, current);
+      final State st = getCurrentState(t, p, params, pq, currentQ);
       if (t > params.initTrain) {
         checkPeriod(t, st, p, history, periods, verbose);
       }
@@ -251,40 +270,93 @@ public class qSPQ {
       }
 
       // Process next packet.
-      if (current == null) {
+      if (currentQ == null) {
         if (pq.get(Type.Hi).size() > 0) { // peek High packet.
-          current = pq.get(Type.Hi).peek();
+          currentQ = pq.get(Type.Hi);
         } else if (pq.get(Type.Lo).size() > 0) { // peek Low packet.
-          current = pq.get(Type.Lo).peek();
+          currentQ = pq.get(Type.Lo);
         }
       }
 
-      if (current != null) {
-        current.timeToProcess--;
-        if (current.timeToProcess == 0) { // Remove packet from queue.
-          if (current.ofInterest)
+      if (currentQ != null) {
+        final Packet thisPacket = currentQ.peek();
+        thisPacket.timeToProcess--;
+        if (thisPacket.timeToProcess == 0) { // Remove packet from queue.
+          if (thisPacket.ofInterest)
             cntProcessedPOI++;
-          pq.get(current.type).poll();
           if (verbose)
-            System.out.format("Packet (%s at %2d) has been processed. Removed from queue.\n", current.type,
-              current.arrivalTime);
-          current = null;
+            System.out.format("Packet (%s at %2d) has been processed. Removed from queue.\n", thisPacket.type,
+              thisPacket.arrivalTime);
+          currentQ.poll();
+          currentQ = null;
         } else {
           if (verbose)
-            System.out.format("Packet (%s at %2d) needs %d more ticks to process.\n", current.type, current.arrivalTime,
-              current.timeToProcess);
+            System.out
+              .format("Packet (%s at %2d) needs %d more ticks to process.\n", thisPacket.type, thisPacket.arrivalTime,
+                thisPacket.timeToProcess);
         }
       }
       if (verbose)
         System.out.format("\n");
     }
 
-    System.out
-      .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\t",
-        cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
-        cntLostPOI * 100 / cntArrivedPOI, (cntArrivedPOI - cntProcessedPOI) * 100 / cntArrivedPOI);
-    System.out.format("   Period(s) found: %s\n\n", Arrays.toString(periods.toArray()));
+    if (!suppress) {
+      System.out
+        .format("POI Summary: %3d arrived, %3d lost, %3d processed, %3d still in queue (loss rate %3d%% - %3d%%)\t",
+          cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI, //
+          cntLostPOI * 100 / cntArrivedPOI, (cntArrivedPOI - cntProcessedPOI) * 100 / cntArrivedPOI);
+      System.out.format("   Period(s) found: %s\n\n", Arrays.toString(periods.toArray()));
+    }
     return new Summary(cntArrivedPOI, cntLostPOI, cntProcessedPOI, cntArrivedPOI - cntLostPOI - cntProcessedPOI,
       periods);
   }
+
+  // ------------------------------------------------------------------------------------------------------
+  static class MultiSummary {
+    final Params params;
+    final Type typePOI;
+    final int maxT;
+    final int numRepeats;
+    final List<Summary> summaries;
+
+    public MultiSummary(Params params, Type typePOI, int maxT, int numRepeats) {
+      this.params = params;
+      this.typePOI = typePOI;
+      this.maxT = maxT;
+      this.numRepeats = numRepeats;
+      this.summaries = new ArrayList<>();
+    }
+
+    public void add(Summary sum) {
+      summaries.add(sum);
+    }
+
+    @Override public String toString() {
+      int minLR = summaries.stream().map(sum -> sum.getLossRate().getRight()).min(Integer::compare).orElse(200);
+      int maxLR = summaries.stream().map(sum -> sum.getLossRate().getRight()).max(Integer::compare).orElse(-1);
+      long sumLR = summaries.stream().map(sum -> (long) sum.getLossRate().getRight()).reduce(Long::sum).orElse(0L);
+      //      final int initTrain; // n_I: Initial # of High packets
+      //      final int Q_CAPACITY; // Q: Capacity of each queue
+      //      final int GROUP_LENGTH; // This is equal to (N' + 1).
+      //      final int TIME_TO_PROCESS; // This is (1 / Z) assuming that r = 1.
+      //      final double probH; // This defines probability of "sticking to the plan" for H packets
+      //      final double probL; // This defines probability of "sticking to the plan" for L packets
+
+      return String.format(
+        "[Loss Rate: min (%3d) max (%3d) avg (%6.2f)] [Params: n_I = %6d  Q_cap = %3d  N' = %2d  (r/Z) = %2d  probH = %5.2f  probL = %5.2f]",
+        minLR, maxLR, (double) sumLR / summaries.size(),//
+        params.initTrain, params.Q_CAPACITY, params.GROUP_LENGTH - 1, params.TIME_TO_PROCESS, //
+        params.probH, params.probL);
+    }
+  }
+
+  public MultiSummary simulateMultiple(Params params, Type typePOI, int maxT, int numRepeats) {
+    MultiSummary multiSummary = new MultiSummary(params, typePOI, maxT, numRepeats);
+    for (int i = 0; i < numRepeats; i++) {
+      Summary sum = simulateOnce(params, typePOI, maxT, false, true);
+      multiSummary.add(sum);
+    }
+    return multiSummary;
+  }
+
 }

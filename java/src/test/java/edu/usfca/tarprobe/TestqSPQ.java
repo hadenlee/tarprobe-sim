@@ -18,13 +18,13 @@ public class TestqSPQ {
     Params params = new Params(3, 2, 3, 2);
 
     {
-      Summary summaryHi = instance.simulate(params, Type.Hi, 25, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, 25, false);
       assertEquals(7, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(6, summaryHi.processed);
       assertEquals(6, summaryHi.getSmallestPeriod());
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, 25, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, 25, false);
       assertEquals(7, summaryLo.arrived);
       assertEquals(5, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -33,13 +33,13 @@ public class TestqSPQ {
     }
 
     {
-      Summary summaryHi = instance.simulate(params, Type.Hi, 250, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, 250, false);
       assertEquals(82, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(82, summaryHi.processed);
       assertEquals(6, summaryHi.getSmallestPeriod());
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, 250, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, 250, false);
       assertEquals(82, summaryLo.arrived);
       assertEquals(80, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -48,13 +48,13 @@ public class TestqSPQ {
     }
 
     {
-      Summary summaryHi = instance.simulate(params, Type.Hi, 252, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, 252, false);
       assertEquals(83, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(82, summaryHi.processed);
       assertEquals(6, summaryHi.getSmallestPeriod());
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, 252, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, 252, false);
       assertEquals(83, summaryLo.arrived);
       assertEquals(81, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -63,13 +63,13 @@ public class TestqSPQ {
     }
 
     {
-      Summary summaryHi = instance.simulate(params, Type.Hi, 255, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, 255, false);
       assertEquals(84, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(83, summaryHi.processed);
       assertEquals(6, summaryHi.getSmallestPeriod());
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, 255, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, 255, false);
       assertEquals(84, summaryLo.arrived);
       assertEquals(82, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -89,12 +89,12 @@ public class TestqSPQ {
 
     {
       int M = 100;
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, true);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(100, summaryHi.arrived);
       assertEquals(20, summaryHi.lost);
       assertEquals(6, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(100, summaryLo.arrived);
       assertEquals(25, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -106,12 +106,12 @@ public class TestqSPQ {
 
     {
       int M = 1000;
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(1000, summaryHi.arrived);
       assertEquals(200, summaryHi.lost);
       assertEquals(726, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(1000, summaryLo.arrived);
       assertEquals(925, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -123,12 +123,12 @@ public class TestqSPQ {
 
     {
       int M = 5000;
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(5000, summaryHi.arrived);
       assertEquals(1000, summaryHi.lost);
       assertEquals(3926, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(5000, summaryLo.arrived);
       assertEquals(4925, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -140,12 +140,12 @@ public class TestqSPQ {
 
     {
       int M = 10000;
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(10000, summaryHi.arrived);
       assertEquals(2000, summaryHi.lost);
       assertEquals(7926, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(10000, summaryLo.arrived);
       assertEquals(9925, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -168,12 +168,12 @@ public class TestqSPQ {
 
     {
       Params params = new Params(150, 75, 1 + 1, 5);
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryHi.arrived);
       assertEquals(300, summaryHi.lost);
       assertEquals(126, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -185,12 +185,12 @@ public class TestqSPQ {
 
     {
       Params params = new Params(150, 75, 2 + 1, 5);
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryHi.arrived);
       assertEquals(200, summaryHi.lost);
       assertEquals(226, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -202,12 +202,12 @@ public class TestqSPQ {
 
     {
       Params params = new Params(150, 75, 5 + 1, 5);
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(499, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);
@@ -219,12 +219,12 @@ public class TestqSPQ {
 
     {
       Params params = new Params(150, 75, 10 + 1, 5);
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulateOnce(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryHi.arrived);
       assertEquals(0, summaryHi.lost);
       assertEquals(499, summaryHi.processed);
 
-      Summary summaryLo = instance.simulate(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryLo = instance.simulateOnce(params, Type.Lo, params.initTrain + M * params.GROUP_LENGTH, false);
       assertEquals(500, summaryLo.arrived);
       assertEquals(425, summaryLo.lost);
       assertEquals(0, summaryLo.processed);

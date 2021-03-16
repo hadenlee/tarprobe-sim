@@ -10,8 +10,15 @@ import java.util.List;
  * Follow the instructions on github.
  */
 public class Main {
+
   public static void main(String[] args) {
     System.out.format("ta-da!\n");
+
+    MultiSimulation.run();
+  }
+
+
+  public static void plots() { // static SPQ, to match plots from NS-3 simulations.
     SPQ ins = new SPQ();
 
     final int plotNo = 3;
@@ -64,6 +71,5 @@ public class Main {
         System.out.format("================[Done N' = %d]\n", np);
       }
     }
-
   }
 }
