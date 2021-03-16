@@ -36,9 +36,39 @@ public class qSPQ {
   }
 
 
+  static class QueueState {
+    final List<Boolean> isPOI;
+    final List<Type> packetTypes;
+    final int n;
+
+    public QueueState(Queue<Packet> qu) {
+      n = qu.size();
+      isPOI = new ArrayList<>();
+      packetTypes = new ArrayList<>();
+      for (Packet p : qu) {
+        isPOI.add(p.ofInterest);
+        packetTypes.add(p.type);
+      }
+    }
+
+    @Override public boolean equals(Object o) {
+      if (this == o)
+        return true;
+      if (!(o instanceof QueueState))
+        return false;
+      QueueState that = (QueueState) o;
+      return n == that.n && Objects.equal(isPOI, that.isPOI) && Objects.equal(packetTypes, that.packetTypes);
+    }
+
+    @Override public int hashCode() {
+      return Objects.hashCode(isPOI, packetTypes, n);
+    }
+  }
+
+
   static class State {
     int position, hq_size, lq_size, timeToProcess;
-    List<Integer> hq_poi_index, lq_poi_index;
+    QueueState hQ, lQ;
     boolean newPacketPOI;
     Type currentType, newPacketType;
 
@@ -48,22 +78,11 @@ public class qSPQ {
       this.newPacketType = newPacketType;
       this.newPacketPOI = newPacketPOI;
       this.hq_size = hq.size();
-      this.hq_poi_index = getPOIVector(hq);
+      this.hQ = new QueueState(hq);
       this.lq_size = lq.size();
-      this.lq_poi_index = getPOIVector(lq);
+      this.lQ = new QueueState(lq);
       this.timeToProcess = timeToProcess;
       this.currentType = currentType;
-    }
-
-    static List<Integer> getPOIVector(Queue<Packet> qu) {
-      List<Integer> arr = new ArrayList<>();
-      int index = 0;
-      for (Packet p : qu) {
-        index++;
-        if (p.ofInterest)
-          arr.add(index);
-      }
-      return arr;
     }
 
     @Override public String toString() {
@@ -72,6 +91,7 @@ public class qSPQ {
         timeToProcess >= 0 ? currentType.name() : "--");
     }
 
+
     @Override public boolean equals(Object o) {
       if (this == o)
         return true;
@@ -79,15 +99,13 @@ public class qSPQ {
         return false;
       State state = (State) o;
       return position == state.position && hq_size == state.hq_size && lq_size == state.lq_size
-        && timeToProcess == state.timeToProcess && newPacketPOI == state.newPacketPOI && Objects
-        .equal(hq_poi_index, state.hq_poi_index) && Objects.equal(lq_poi_index, state.lq_poi_index)
-        && currentType == state.currentType && newPacketType == state.newPacketType;
+        && timeToProcess == state.timeToProcess && newPacketPOI == state.newPacketPOI && Objects.equal(hQ, state.hQ)
+        && Objects.equal(lQ, state.lQ) && currentType == state.currentType && newPacketType == state.newPacketType;
     }
 
     @Override public int hashCode() {
       return Objects
-        .hashCode(position, hq_size, lq_size, timeToProcess, hq_poi_index, lq_poi_index, newPacketPOI, currentType,
-          newPacketType);
+        .hashCode(position, hq_size, lq_size, timeToProcess, hQ, lQ, newPacketPOI, currentType, newPacketType);
     }
   }
 
@@ -109,7 +127,9 @@ public class qSPQ {
     }
 
     int getSmallestPeriod() {
-      return periods.iterator().next();
+      if (periods.iterator().hasNext())
+        return periods.iterator().next();
+      return -1;
     }
   }
 
@@ -206,9 +226,9 @@ public class qSPQ {
 
       // -------------------------------------------------------------------
       final State st = getCurrentState(t, p, params, pq, current);
-      checkPeriod(t, st, p, history, periods, verbose);
-      // TODO: Now state has to taken "packet types" into account due to probabilistic nature.
-      // More refactoring to come.
+      if (t > params.initTrain) {
+        checkPeriod(t, st, p, history, periods, verbose);
+      }
       // -------------------------------------------------------------------
       Type targetType;
       final double prob = params.getProb(p.type);

@@ -89,7 +89,7 @@ public class TestqSPQ {
 
     {
       int M = 100;
-      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, false);
+      Summary summaryHi = instance.simulate(params, Type.Hi, params.initTrain + M * params.GROUP_LENGTH, true);
       assertEquals(100, summaryHi.arrived);
       assertEquals(20, summaryHi.lost);
       assertEquals(6, summaryHi.processed);
