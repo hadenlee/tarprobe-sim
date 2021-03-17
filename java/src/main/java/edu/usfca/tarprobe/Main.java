@@ -14,7 +14,10 @@ public class Main {
   public static void main(String[] args) {
     System.out.format("ta-da!\n");
 
-    MultiSimulation.run();
+    MultiSimulation.run(1.0, 1.0);
+    MultiSimulation.run(1.0, 0.9);
+    MultiSimulation.run(0.9, 1.0);
+    MultiSimulation.run(0.9, 0.9);
   }
 
 

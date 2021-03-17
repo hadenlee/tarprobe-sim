@@ -335,17 +335,12 @@ public class qSPQ {
       int minLR = summaries.stream().map(sum -> sum.getLossRate().getRight()).min(Integer::compare).orElse(200);
       int maxLR = summaries.stream().map(sum -> sum.getLossRate().getRight()).max(Integer::compare).orElse(-1);
       long sumLR = summaries.stream().map(sum -> (long) sum.getLossRate().getRight()).reduce(Long::sum).orElse(0L);
-      //      final int initTrain; // n_I: Initial # of High packets
-      //      final int Q_CAPACITY; // Q: Capacity of each queue
-      //      final int GROUP_LENGTH; // This is equal to (N' + 1).
-      //      final int TIME_TO_PROCESS; // This is (1 / Z) assuming that r = 1.
-      //      final double probH; // This defines probability of "sticking to the plan" for H packets
-      //      final double probL; // This defines probability of "sticking to the plan" for L packets
 
       return String.format(
-        "[Loss Rate: min (%3d) max (%3d) avg (%6.2f)] [Params: n_I = %6d  Q_cap = %3d  N' = %2d  (r/Z) = %2d  probH = %5.2f  probL = %5.2f]",
-        minLR, maxLR, (double) sumLR / summaries.size(),//
-        params.initTrain, params.Q_CAPACITY, params.GROUP_LENGTH - 1, params.TIME_TO_PROCESS, //
+        "[Loss Rate: min (%3d) max (%3d) avg (%6.2f) over %5d runs] [Params: n_I = %6d  Q_cap = %3d  N' = %2d  (r/Z) = %2d  M = %5d  probH = %5.2f  probL = %5.2f]",
+        minLR, maxLR, (double) sumLR / summaries.size(), numRepeats, //
+        params.initTrain, params.Q_CAPACITY, params.GROUP_LENGTH - 1, params.TIME_TO_PROCESS,
+        (maxT - params.initTrain) / params.GROUP_LENGTH, //
         params.probH, params.probL);
     }
   }
