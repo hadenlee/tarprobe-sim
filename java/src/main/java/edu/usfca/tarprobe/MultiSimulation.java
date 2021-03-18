@@ -10,9 +10,9 @@ public class MultiSimulation {
 
     qSPQ ins = new qSPQ();
 
-    final int numRepeats = 500;
+    final int numRepeats = probH == 1.0 && probL == 1.0 ? 1 : 200;
 
-    qSPQ.Params params = new qSPQ.Params(3, 2, 3, 2, probH, probL);
+    qSPQ.Params params = new qSPQ.Params(150, 75, 4, 5, probH, probL);
     List<String> expResult = new ArrayList<>();
     // plot No = 1  (but only up to 5K packets)
     for (int M : new int[] {1000, 2000, 3000, 4000, 5000}) {

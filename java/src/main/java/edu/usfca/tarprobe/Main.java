@@ -15,9 +15,11 @@ public class Main {
     System.out.format("ta-da!\n");
 
     MultiSimulation.run(1.0, 1.0);
-    MultiSimulation.run(1.0, 0.9);
-    MultiSimulation.run(0.9, 1.0);
-    MultiSimulation.run(0.9, 0.9);
+    //    MultiSimulation.run(0.9, 0.9);
+    //    MultiSimulation.run(0.8, 0.8);
+    MultiSimulation.run(0.7, 0.7);
+    MultiSimulation.run(0.6, 0.6);
+    MultiSimulation.run(0.5, 0.5);
   }
 
 
