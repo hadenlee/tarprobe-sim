@@ -16,7 +16,7 @@ import java.util.TreeSet;
 
 public class qSPQ {
   public enum Type {
-    Lo, Hi;
+    Hi, Lo;
   }
 
 

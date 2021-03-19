@@ -6,16 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MultiSimulation {
-  public static void run(double probH, double probL) {
+  public static void run(qSPQ.Params params) {
 
     qSPQ ins = new qSPQ();
 
+    double probH = params.probH, probL = params.probL;
     final int numRepeats = probH == 1.0 && probL == 1.0 ? 1 : 200;
 
-    qSPQ.Params params = new qSPQ.Params(150, 75, 4, 5, probH, probL);
     List<String> expResult = new ArrayList<>();
     // plot No = 1  (but only up to 5K packets)
-    for (int M : new int[] {1000, 2000, 3000, 4000, 5000}) {
+    for (int M : new int[] {5000}) {
       MultiSummary ms1 =
         ins.simulateMultiple(params, qSPQ.Type.Hi, params.initTrain + M * params.GROUP_LENGTH, numRepeats);
       MultiSummary ms2 =

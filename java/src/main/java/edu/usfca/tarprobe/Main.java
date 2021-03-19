@@ -13,13 +13,37 @@ public class Main {
 
   public static void main(String[] args) {
     System.out.format("ta-da!\n");
+    qSPQ.Params params;
 
-    MultiSimulation.run(1.0, 1.0);
+    for (int pp = 100; pp >= 50; pp -= 10) {
+      double prob = pp / 100.;
+      params = new qSPQ.Params(150, 75, 4, 5, prob, prob);
+      qSPQEstimator.test(params);
+      System.out.format("\n");
+      //      MultiSimulation.run(params);
+    }
+
+    //    params = new qSPQ.Params(200, 75, 4, 5, 0.5, 0.5);
+    //    qSPQEstimator.test(params, Type.Hi, params.initTrain + 5000 * params.GROUP_LENGTH);
+    //    qSPQEstimator.test(params, Type.Lo, params.initTrain + 5000 * params.GROUP_LENGTH);
+    //    System.out.format("\n");
+    //
+    //    params = new qSPQ.Params(200, 75, 5, 5, 0.5, 0.5);
+    //    qSPQEstimator.test(params, Type.Hi, params.initTrain + 5000 * params.GROUP_LENGTH);
+    //    qSPQEstimator.test(params, Type.Lo, params.initTrain + 5000 * params.GROUP_LENGTH);
+    //    System.out.format("\n");
+    //
+    //    params = new qSPQ.Params(200, 75, 6, 5, 0.5, 0.5);
+    //    qSPQEstimator.test(params, Type.Hi, params.initTrain + 5000 * params.GROUP_LENGTH);
+    //    qSPQEstimator.test(params, Type.Lo, params.initTrain + 5000 * params.GROUP_LENGTH);
+    //    System.out.format("\n");
+
+
     //    MultiSimulation.run(0.9, 0.9);
     //    MultiSimulation.run(0.8, 0.8);
-    MultiSimulation.run(0.7, 0.7);
-    MultiSimulation.run(0.6, 0.6);
-    MultiSimulation.run(0.5, 0.5);
+    //    MultiSimulation.run(0.7, 0.7);
+    //    MultiSimulation.run(0.6, 0.6);
+    //    MultiSimulation.run(0.5, 0.5);
   }
 
 
