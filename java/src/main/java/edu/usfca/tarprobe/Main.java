@@ -20,6 +20,9 @@ public class Main {
       params = new qSPQ.Params(150, 75, 4, 5, prob, prob);
       qSPQEstimator.test(params);
       System.out.format("\n");
+      qSPQEstimator.test2(params);
+      System.out.format("\n");
+      System.out.format("================================ prob = %.2f ==================\n", prob);
       //      MultiSimulation.run(params);
     }
 
