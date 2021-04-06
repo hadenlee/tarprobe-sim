@@ -169,6 +169,11 @@ public class qSPQ {
           return 0;
       }
     }
+
+    @Override public String toString() {
+      return String
+        .format("n_i = %3d  Q = %3d  N' = %d  TTP = %d", initTrain, Q_CAPACITY, GROUP_LENGTH - 1, TIME_TO_PROCESS);
+    }
   }
 
   static Type getAntiType(Type t) {

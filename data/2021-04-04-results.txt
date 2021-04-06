@@ -1,0 +1,1008 @@
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 150  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2573.92  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  2573.92  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 150  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2154.30  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2154.30  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 150  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1728.68  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.72  loss rate:  91.27  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1728.62  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.70  loss rate:  91.27  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 150  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1334.36  loss rate:  73.31  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   680.08  loss rate:  86.40  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1334.19  loss rate:  73.32  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.97  loss rate:  86.40  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 150  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   984.53  loss rate:  80.31  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.53  loss rate:  80.31  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   984.36  loss rate:  80.31  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.36  loss rate:  80.31  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 150  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 151  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2573.88  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  2573.88  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 151  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2154.26  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.59  loss rate:  94.99  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2154.26  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.59  loss rate:  94.99  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 151  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1728.70  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.73  loss rate:  91.27  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1728.64  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.70  loss rate:  91.27  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 151  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1334.48  loss rate:  73.31  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   680.16  loss rate:  86.40  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1334.31  loss rate:  73.31  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   680.06  loss rate:  86.40  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 151  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   984.67  loss rate:  80.31  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.67  loss rate:  80.31  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   984.50  loss rate:  80.31  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.50  loss rate:  80.31  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 151  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 152  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2573.86  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  2573.86  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 152  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2154.23  loss rate:  56.92  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2154.23  loss rate:  56.92  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 152  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1728.56  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.68  loss rate:  91.27  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1728.50  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.66  loss rate:  91.27  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 152  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1334.25  loss rate:  73.32  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.99  loss rate:  86.40  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1334.08  loss rate:  73.32  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.88  loss rate:  86.40  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 152  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   984.50  loss rate:  80.31  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.50  loss rate:  80.31  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   984.32  loss rate:  80.31  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.32  loss rate:  80.31  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 152  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 153  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2573.88  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  2573.88  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 153  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2154.26  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2154.26  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 153  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1728.41  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.61  loss rate:  91.27  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1728.36  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.59  loss rate:  91.27  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 153  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1333.83  loss rate:  73.32  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.70  loss rate:  86.41  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1333.67  loss rate:  73.33  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.59  loss rate:  86.41  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 153  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   984.17  loss rate:  80.32  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.17  loss rate:  80.32  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   984.00  loss rate:  80.32  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.00  loss rate:  80.32  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 153  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 154  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2573.92  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  2573.92  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 154  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2154.29  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2154.29  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 154  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1728.38  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.62  loss rate:  91.27  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1728.34  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.61  loss rate:  91.27  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 154  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1333.83  loss rate:  73.32  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.76  loss rate:  86.40  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1333.66  loss rate:  73.33  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.65  loss rate:  86.41  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 154  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   984.24  loss rate:  80.32  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.24  loss rate:  80.32  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   984.07  loss rate:  80.32  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.07  loss rate:  80.32  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 154  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  2925.00  loss rate:  41.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 155  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2573.92  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  2573.92  loss rate:  48.52  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.28  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 155  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2154.30  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2154.30  loss rate:  56.91  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   250.60  loss rate:  94.99  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 155  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1728.29  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.58  loss rate:  91.27  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1728.25  loss rate:  65.43  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   436.57  loss rate:  91.27  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 155  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1333.56  loss rate:  73.33  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.57  loss rate:  86.41  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1333.40  loss rate:  73.33  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   679.46  loss rate:  86.41  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 155  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   984.03  loss rate:  80.32  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   984.03  loss rate:  80.32  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   983.86  loss rate:  80.32  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   983.86  loss rate:  80.32  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 155  Q =  75  N' = 2  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 150  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3222.50  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3222.50  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 150  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2517.88  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2517.88  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 150  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1904.27  loss rate:  61.91  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.91  loss rate:  91.48  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1904.22  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.90  loss rate:  91.48  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 150  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1395.88  loss rate:  72.08  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.87  loss rate:  86.66  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1395.75  loss rate:  72.08  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.80  loss rate:  86.66  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 150  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   988.31  loss rate:  80.23  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   988.31  loss rate:  80.23  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   988.18  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   988.18  loss rate:  80.24  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 150  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3924.00  loss rate:  21.52  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  3924.00  loss rate:  21.52  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 151  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3221.91  loss rate:  35.56  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3221.91  loss rate:  35.56  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 151  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2517.55  loss rate:  49.65  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2517.55  loss rate:  49.65  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 151  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1904.13  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.90  loss rate:  91.48  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1904.07  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.88  loss rate:  91.48  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 151  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1395.89  loss rate:  72.08  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.90  loss rate:  86.66  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1395.76  loss rate:  72.08  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.83  loss rate:  86.66  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 151  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   988.36  loss rate:  80.23  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   988.36  loss rate:  80.23  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   988.23  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   988.23  loss rate:  80.24  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 151  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 152  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3222.65  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.19  loss rate:  97.82  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3222.65  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.19  loss rate:  97.82  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 152  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2518.22  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.73  loss rate:  95.07  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2518.22  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.73  loss rate:  95.07  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 152  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1904.54  loss rate:  61.91  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   426.10  loss rate:  91.48  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1904.50  loss rate:  61.91  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   426.09  loss rate:  91.48  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 152  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1395.99  loss rate:  72.08  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.95  loss rate:  86.66  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1395.86  loss rate:  72.08  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.87  loss rate:  86.66  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 152  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   988.45  loss rate:  80.23  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   988.45  loss rate:  80.23  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   988.32  loss rate:  80.23  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   988.32  loss rate:  80.23  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 152  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 153  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3222.61  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.10  loss rate:  97.82  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3222.61  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.10  loss rate:  97.82  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 153  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2518.09  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.57  loss rate:  95.07  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2518.09  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.57  loss rate:  95.07  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 153  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1904.26  loss rate:  61.91  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.89  loss rate:  91.48  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1904.22  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.87  loss rate:  91.48  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 153  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1395.55  loss rate:  72.09  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.61  loss rate:  86.67  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1395.43  loss rate:  72.09  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.54  loss rate:  86.67  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 153  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   988.08  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   988.08  loss rate:  80.24  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   987.95  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   987.95  loss rate:  80.24  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 153  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 154  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3222.55  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3222.55  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 154  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2517.98  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2517.98  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 154  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1904.07  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.83  loss rate:  91.48  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1904.03  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.82  loss rate:  91.48  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 154  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1395.34  loss rate:  72.09  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.51  loss rate:  86.67  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1395.21  loss rate:  72.10  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.44  loss rate:  86.67  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 154  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   987.94  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   987.94  loss rate:  80.24  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   987.81  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   987.81  loss rate:  80.24  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 154  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  3925.00  loss rate:  21.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 155  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3222.50  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3222.50  loss rate:  35.55  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.09  loss rate:  97.82  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 155  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2517.88  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2517.88  loss rate:  49.64  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.53  loss rate:  95.07  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 155  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1903.95  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.81  loss rate:  91.48  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1903.91  loss rate:  61.92  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   425.80  loss rate:  91.48  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 155  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1395.26  loss rate:  72.09  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.50  loss rate:  86.67  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1395.13  loss rate:  72.10  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   666.43  loss rate:  86.67  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 155  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   987.93  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   987.93  loss rate:  80.24  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   987.80  loss rate:  80.24  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   987.80  loss rate:  80.24  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 155  Q =  75  N' = 3  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 150  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3178.25  loss rate:  36.44  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     0.05  loss rate: 100.00  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3178.25  loss rate:  36.44  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     0.05  loss rate: 100.00  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 150  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1876.87  loss rate:  62.46  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:     1.61  loss rate:  99.97  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  1876.87  loss rate:  62.46  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:     1.61  loss rate:  99.97  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 150  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   993.05  loss rate:  80.14  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:    12.85  loss rate:  99.74  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:   992.98  loss rate:  80.14  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:    12.83  loss rate:  99.74  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 150  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   463.39  loss rate:  90.73  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:    58.71  loss rate:  98.83  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:   463.22  loss rate:  90.74  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:    58.62  loss rate:  98.83  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 150  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   187.18  loss rate:  96.26  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   187.18  loss rate:  96.26  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   187.02  loss rate:  96.26  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   187.02  loss rate:  96.26  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 150  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 151  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4432.50  loss rate:  11.35  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   492.50  loss rate:  90.15  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  4432.50  loss rate:  11.35  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   492.50  loss rate:  90.15  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 151  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3940.00  loss rate:  21.20  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   985.00  loss rate:  80.30  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  3940.00  loss rate:  21.20  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   985.00  loss rate:  80.30  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 151  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3447.50  loss rate:  31.05  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:  1477.50  loss rate:  70.45  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  3447.50  loss rate:  31.05  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:  1477.50  loss rate:  70.45  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 151  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2955.00  loss rate:  40.90  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:  1970.00  loss rate:  60.60  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  2955.00  loss rate:  40.90  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:  1970.00  loss rate:  60.60  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 151  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2462.50  loss rate:  50.75  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:  2462.50  loss rate:  50.75  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:  2462.50  loss rate:  50.75  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:  2462.50  loss rate:  50.75  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 151  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 152  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4078.81  loss rate:  18.42  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:    49.29  loss rate:  99.01  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  4078.81  loss rate:  18.42  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:    49.29  loss rate:  99.01  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 152  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3273.27  loss rate:  34.53  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   198.03  loss rate:  96.04  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  3273.27  loss rate:  34.53  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   198.03  loss rate:  96.04  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 152  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2525.34  loss rate:  49.49  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   449.58  loss rate:  91.01  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  2525.32  loss rate:  49.49  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   449.57  loss rate:  91.01  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 152  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1856.15  loss rate:  62.88  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   810.00  loss rate:  83.80  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1856.07  loss rate:  62.88  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   809.95  loss rate:  83.80  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 152  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1282.02  loss rate:  74.36  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:  1282.02  loss rate:  74.36  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:  1281.93  loss rate:  74.36  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:  1281.93  loss rate:  74.36  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 152  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 153  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3753.34  loss rate:  24.93  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     4.93  loss rate:  99.90  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3753.34  loss rate:  24.93  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     4.93  loss rate:  99.90  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 153  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2719.35  loss rate:  45.61  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:    39.81  loss rate:  99.20  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2719.35  loss rate:  45.61  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:    39.81  loss rate:  99.20  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 153  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1849.85  loss rate:  63.00  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   136.86  loss rate:  97.26  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1849.82  loss rate:  63.00  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   136.85  loss rate:  97.26  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 153  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1166.69  loss rate:  76.67  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   333.95  loss rate:  93.32  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1166.57  loss rate:  76.67  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   333.88  loss rate:  93.32  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 153  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   669.52  loss rate:  86.61  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   669.52  loss rate:  86.61  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   669.39  loss rate:  86.61  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   669.39  loss rate:  86.61  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 153  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 154  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3453.85  loss rate:  30.92  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     0.49  loss rate:  99.99  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3453.85  loss rate:  30.92  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     0.49  loss rate:  99.99  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 154  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2259.18  loss rate:  54.82  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:     8.00  loss rate:  99.84  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2259.18  loss rate:  54.82  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:     8.00  loss rate:  99.84  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 154  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1355.05  loss rate:  72.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:    41.71  loss rate:  99.17  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  1355.01  loss rate:  72.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:    41.70  loss rate:  99.17  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 154  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   734.07  loss rate:  85.32  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   138.54  loss rate:  97.23  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:   733.92  loss rate:  85.32  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   138.46  loss rate:  97.23  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 154  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   351.69  loss rate:  92.97  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   351.69  loss rate:  92.97  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   351.54  loss rate:  92.97  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   351.54  loss rate:  92.97  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 154  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4925.00  loss rate:   1.50  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 155  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3178.25  loss rate:  36.44  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     0.05  loss rate: 100.00  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3178.25  loss rate:  36.44  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:     0.05  loss rate: 100.00  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 155  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1876.87  loss rate:  62.46  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:     1.61  loss rate:  99.97  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  1876.87  loss rate:  62.46  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:     1.61  loss rate:  99.97  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 155  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   992.61  loss rate:  80.15  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:    12.75  loss rate:  99.74  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:   992.56  loss rate:  80.15  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:    12.74  loss rate:  99.75  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 155  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   462.57  loss rate:  90.75  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:    58.29  loss rate:  98.83  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:   462.40  loss rate:  90.75  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:    58.20  loss rate:  98.84  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 155  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   186.72  loss rate:  96.27  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   186.72  loss rate:  96.27  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   186.56  loss rate:  96.27  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   186.56  loss rate:  96.27  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 155  Q =  75  N' = 4  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 150  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3983.83  loss rate:  20.32  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.79  loss rate:  97.80  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3983.83  loss rate:  20.32  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.79  loss rate:  97.80  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 150  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2881.71  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.23  loss rate:  95.06  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2881.71  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.23  loss rate:  95.06  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 150  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2055.35  loss rate:  58.89  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.86  loss rate:  91.50  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  2055.32  loss rate:  58.89  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.85  loss rate:  91.50  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 150  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1441.12  loss rate:  71.18  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.55  loss rate:  86.73  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1441.04  loss rate:  71.18  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.50  loss rate:  86.73  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 150  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   992.27  loss rate:  80.15  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   992.27  loss rate:  80.15  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   992.19  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   992.19  loss rate:  80.16  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 150  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 151  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3983.55  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.69  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3983.55  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.69  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 151  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2881.42  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.04  loss rate:  95.06  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2881.42  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.04  loss rate:  95.06  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 151  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2055.06  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.64  loss rate:  91.51  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  2055.03  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.63  loss rate:  91.51  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 151  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1440.98  loss rate:  71.18  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.43  loss rate:  86.73  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1440.89  loss rate:  71.18  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.38  loss rate:  86.73  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 151  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   992.16  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   992.16  loss rate:  80.16  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   992.07  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   992.07  loss rate:  80.16  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 151  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 152  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3983.44  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.68  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3983.44  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.68  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 152  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2881.19  loss rate:  42.38  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.00  loss rate:  95.06  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2881.19  loss rate:  42.38  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.00  loss rate:  95.06  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 152  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2054.80  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.55  loss rate:  91.51  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  2054.76  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.54  loss rate:  91.51  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 152  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1440.75  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.27  loss rate:  86.73  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1440.66  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.23  loss rate:  86.74  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 152  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   991.98  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   991.98  loss rate:  80.16  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   991.89  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   991.89  loss rate:  80.16  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 152  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 153  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3983.37  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.68  loss rate:  97.81  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3983.37  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.68  loss rate:  97.81  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 153  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2881.02  loss rate:  42.38  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.99  loss rate:  95.06  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2881.02  loss rate:  42.38  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   246.99  loss rate:  95.06  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 153  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2054.57  loss rate:  58.91  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.50  loss rate:  91.51  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  2054.53  loss rate:  58.91  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.50  loss rate:  91.51  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 153  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1440.46  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.11  loss rate:  86.74  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1440.38  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.06  loss rate:  86.74  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 153  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   991.76  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   991.76  loss rate:  80.16  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   991.68  loss rate:  80.17  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   991.68  loss rate:  80.17  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 153  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 154  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3983.58  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.78  loss rate:  97.80  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3983.58  loss rate:  20.33  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.78  loss rate:  97.80  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 154  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2881.37  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.19  loss rate:  95.06  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2881.37  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.19  loss rate:  95.06  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 154  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2054.92  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.77  loss rate:  91.50  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  2054.89  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.76  loss rate:  91.50  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 154  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1440.69  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.33  loss rate:  86.73  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1440.60  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.28  loss rate:  86.73  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 154  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   992.01  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   992.01  loss rate:  80.16  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   991.93  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   991.93  loss rate:  80.16  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 154  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+[Hi] arrived: 5000  exp.received:  4937.00  loss rate:   1.26  (prob = 1.0  1.0)
+[Lo] arrived: 5000  exp.received:     0.00  loss rate: 100.00  (prob = 1.0  1.0)
+
+================= prob = 1.00 (n_i = 155  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  3983.83  loss rate:  20.32  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.79  loss rate:  97.80  (prob = 0.9  0.9)
+
+[Hi] arrived: 5000  exp.received:  3983.83  loss rate:  20.32  (prob = 0.9  0.9)
+[Lo] arrived: 5000  exp.received:   109.79  loss rate:  97.80  (prob = 0.9  0.9)
+
+================= prob = 0.90 (n_i = 155  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2881.71  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.23  loss rate:  95.06  (prob = 0.8  0.8)
+
+[Hi] arrived: 5000  exp.received:  2881.71  loss rate:  42.37  (prob = 0.8  0.8)
+[Lo] arrived: 5000  exp.received:   247.23  loss rate:  95.06  (prob = 0.8  0.8)
+
+================= prob = 0.80 (n_i = 155  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  2055.16  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.83  loss rate:  91.50  (prob = 0.7  0.7)
+
+[Hi] arrived: 5000  exp.received:  2055.14  loss rate:  58.90  (prob = 0.7  0.7)
+[Lo] arrived: 5000  exp.received:   424.82  loss rate:  91.50  (prob = 0.7  0.7)
+
+================= prob = 0.70 (n_i = 155  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:  1440.70  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.31  loss rate:  86.73  (prob = 0.6  0.6)
+
+[Hi] arrived: 5000  exp.received:  1440.61  loss rate:  71.19  (prob = 0.6  0.6)
+[Lo] arrived: 5000  exp.received:   663.27  loss rate:  86.73  (prob = 0.6  0.6)
+
+================= prob = 0.60 (n_i = 155  Q =  75  N' = 5  TTP = 5) ================
+[Hi] arrived: 5000  exp.received:   992.02  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   992.02  loss rate:  80.16  (prob = 0.5  0.5)
+
+[Hi] arrived: 5000  exp.received:   991.94  loss rate:  80.16  (prob = 0.5  0.5)
+[Lo] arrived: 5000  exp.received:   991.94  loss rate:  80.16  (prob = 0.5  0.5)
+
+================= prob = 0.50 (n_i = 155  Q =  75  N' = 5  TTP = 5) ================

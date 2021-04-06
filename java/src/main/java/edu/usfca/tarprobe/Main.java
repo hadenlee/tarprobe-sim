@@ -15,17 +15,20 @@ public class Main {
     System.out.format("ta-da!\n");
     qSPQ.Params params;
 
-    for (int pp = 100; pp >= 50; pp -= 10) {
-      double prob = pp / 100.;
-      params = new qSPQ.Params(150, 75, 4, 5, prob, prob);
-      qSPQEstimator.test(params);
-      System.out.format("\n");
-      qSPQEstimator.test2(params);
-      System.out.format("\n");
-      System.out.format("================================ prob = %.2f ==================\n", prob);
-      //      MultiSimulation.run(params);
+    for (int gl = 3; gl <= 6; gl++) {
+      for (int offset = 0; offset <= 5; offset++) {
+        for (int pp = 100; pp >= 50; pp -= 10) {
+          double prob = pp / 100.;
+          params = new qSPQ.Params(150 + offset, 75, gl, 5, prob, prob);
+          qSPQEstimator.test(params);
+          System.out.format("\n");
+          qSPQEstimator.test2(params);
+          System.out.format("\n");
+          System.out.format("================= prob = %.2f (%s) ================\n", prob, params.toString());
+          //      MultiSimulation.run(params);
+        }
+      }
     }
-
     //    params = new qSPQ.Params(200, 75, 4, 5, 0.5, 0.5);
     //    qSPQEstimator.test(params, Type.Hi, params.initTrain + 5000 * params.GROUP_LENGTH);
     //    qSPQEstimator.test(params, Type.Lo, params.initTrain + 5000 * params.GROUP_LENGTH);

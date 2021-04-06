@@ -33,17 +33,15 @@ public class qSPQEstimator {
         }
 
         if (isPOI && i + params.Q_CAPACITY * params.TIME_TO_PROCESS <= maxT) {
+          double sumP = 0.0;
           if (i % params.TIME_TO_PROCESS == 1) {
-            double sumP = 0.0;
-            for (int qL = 1; qL <= params.Q_CAPACITY; qL++)
+            for (int qL = 0; qL <= params.Q_CAPACITY; qL++)
               sumP += prev[params.Q_CAPACITY][qL][FLAG_L];
-            expPOIReceived += probToHighQ * (1.0 - sumP);
           } else {
-            double sumP = 0.0;
-            for (int qL = 1; qL <= params.Q_CAPACITY; qL++)
+            for (int qL = 0; qL <= params.Q_CAPACITY; qL++)
               sumP += prev[params.Q_CAPACITY][qL][FLAG_L] + prev[params.Q_CAPACITY][qL][FLAG_H];
-            expPOIReceived += probToHighQ * (1.0 - sumP);
           }
+          expPOIReceived += probToHighQ * (1.0 - sumP);
         }
 
         double[][][] next = new double[params.Q_CAPACITY + 1][params.Q_CAPACITY + 1][2];
@@ -57,6 +55,8 @@ public class qSPQEstimator {
                 next[qH][qL][FLAG_H] += probToHighQ * prev[qH][qL][FLAG_H];
                 if (qL < params.Q_CAPACITY)
                   next[qH][qL][FLAG_H] += probToHighQ * prev[qH - 1][qL + 1][FLAG_L];
+                if (qH == params.Q_CAPACITY && qL < params.Q_CAPACITY)
+                  next[qH][qL][FLAG_H] += probToHighQ * prev[qH][qL + 1][FLAG_L];
 
                 next[qH][qL][FLAG_H] += (1 - probToHighQ) * prev[qH][qL][FLAG_L];
                 if (qH < params.Q_CAPACITY) {
@@ -94,7 +94,7 @@ public class qSPQEstimator {
             tot += next[qH][qL][0] + next[qH][qL][1];
           }
         }
-        
+
         if (Math.abs(tot - 1.) > 1.e-6) {
           throw new RuntimeException(
             String.format("i = %5d, total prob: %10.8f (i mod TTP = %d)", i, tot, i % params.TIME_TO_PROCESS));
