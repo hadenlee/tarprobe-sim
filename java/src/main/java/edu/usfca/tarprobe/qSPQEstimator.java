@@ -1,15 +1,16 @@
 package edu.usfca.tarprobe;
 
-import edu.usfca.tarprobe.qSPQ.Type;
+import edu.usfca.tarprobe.common.Entity;
+import edu.usfca.tarprobe.common.Entity.Type;
 
 public class qSPQEstimator {
 
   public static void test2(qSPQ.Params params) {
     final int M = 5000;
     final int FLAG_H = 0, FLAG_L = 1;
-    for (Type poiType : Type.values()) {
+    for (Type poiType : Entity.Type.values()) {
       final int maxT = params.initTrain + params.GROUP_LENGTH * M;
-      final Type antiType = poiType == Type.Hi ? Type.Lo : Type.Hi;
+      final Type antiType = poiType == Entity.Type.Hi ? Entity.Type.Lo : Entity.Type.Hi;
 
       // [ # packets in Hi ][ # packets in Lo ][ 0 = Hi being processed / 1 = Lo being processed ]
       double[][][] prev = new double[params.Q_CAPACITY + 1][params.Q_CAPACITY + 1][2];
@@ -23,8 +24,8 @@ public class qSPQEstimator {
           cntPOIArrived++;
           isPOI = true;
         }
-        final Type currentType = i <= params.initTrain ? Type.Hi : (isPOI ? poiType : antiType);
-        final double probToHighQ = currentType == Type.Hi ? params.probH : (1. - params.probL);
+        final Type currentType = i <= params.initTrain ? Entity.Type.Hi : (isPOI ? poiType : antiType);
+        final double probToHighQ = currentType == Entity.Type.Hi ? params.probH : (1. - params.probL);
 
         if (i == 1) {
           prev[1][0][FLAG_H] = probToHighQ;
@@ -112,9 +113,9 @@ public class qSPQEstimator {
   // This is slightly incorrect.
   @Deprecated public static void test(qSPQ.Params params) {
     final int M = 5000;
-    for (Type poiType : Type.values()) {
+    for (Type poiType : Entity.Type.values()) {
       final int maxT = params.initTrain + params.GROUP_LENGTH * M;
-      final Type antiType = poiType == Type.Hi ? Type.Lo : Type.Hi;
+      final Type antiType = poiType == Entity.Type.Hi ? Entity.Type.Lo : Entity.Type.Hi;
       double[] prev = new double[params.Q_CAPACITY + 1];
 
       int cntPOIArrived = 0;
@@ -126,8 +127,8 @@ public class qSPQEstimator {
           cntPOIArrived++;
           isPOI = true;
         }
-        final Type currentType = i <= params.initTrain ? Type.Hi : (isPOI ? poiType : antiType);
-        final double probToHighQ = currentType == Type.Hi ? params.probH : (1. - params.probL);
+        final Type currentType = i <= params.initTrain ? Entity.Type.Hi : (isPOI ? poiType : antiType);
+        final double probToHighQ = currentType == Entity.Type.Hi ? params.probH : (1. - params.probL);
 
         if (i == 1) {
           prev[1] = probToHighQ;

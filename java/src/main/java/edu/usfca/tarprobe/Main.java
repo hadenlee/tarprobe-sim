@@ -2,6 +2,8 @@ package edu.usfca.tarprobe;
 
 import edu.usfca.tarprobe.SPQ.Params;
 import edu.usfca.tarprobe.SPQ.Summary;
+import edu.usfca.tarprobe.extra.DiffProbe;
+import edu.usfca.tarprobe.extra.DiffProbe.ConfigDiffProbe;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +15,22 @@ public class Main {
 
   public static void main(String[] args) {
     System.out.format("ta-da!\n");
+    ConfigDiffProbe diff;
+
+    for (int r = 1; r <= 4; r++) {
+      diff = new ConfigDiffProbe(100, r, 2, 75);
+      DiffProbe.run(diff);
+    }
+
+    //    ConfigPopi popi = new ConfigPopi(2, 4);
+    //    POPI.run(popi);
+
+    //    tarprobeDPSimulation(); // Apr 13
+
+
+  }
+
+  static void tarprobeDPSimulation() {
     qSPQ.Params params;
 
     for (int gl = 3; gl <= 6; gl++) {
@@ -29,6 +47,7 @@ public class Main {
         }
       }
     }
+
     //    params = new qSPQ.Params(200, 75, 4, 5, 0.5, 0.5);
     //    qSPQEstimator.test(params, Type.Hi, params.initTrain + 5000 * params.GROUP_LENGTH);
     //    qSPQEstimator.test(params, Type.Lo, params.initTrain + 5000 * params.GROUP_LENGTH);

@@ -1,5 +1,6 @@
 package edu.usfca.tarprobe;
 
+import edu.usfca.tarprobe.common.Entity;
 import edu.usfca.tarprobe.qSPQ.MultiSummary;
 
 import java.util.ArrayList;
@@ -17,9 +18,9 @@ public class MultiSimulation {
     // plot No = 1  (but only up to 5K packets)
     for (int M : new int[] {5000}) {
       MultiSummary ms1 =
-        ins.simulateMultiple(params, qSPQ.Type.Hi, params.initTrain + M * params.GROUP_LENGTH, numRepeats);
+        ins.simulateMultiple(params, Entity.Type.Hi, params.initTrain + M * params.GROUP_LENGTH, numRepeats);
       MultiSummary ms2 =
-        ins.simulateMultiple(params, qSPQ.Type.Lo, params.initTrain + M * params.GROUP_LENGTH, numRepeats);
+        ins.simulateMultiple(params, Entity.Type.Lo, params.initTrain + M * params.GROUP_LENGTH, numRepeats);
 
       System.out.format("[Hi Summary]: %s\n", ms1.toString());
       System.out.format("[Lo Summary]: %s\n", ms2.toString());

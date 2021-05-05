@@ -1,6 +1,8 @@
 package edu.usfca.tarprobe;
 
 import com.google.common.base.Objects;
+import edu.usfca.tarprobe.common.Entity;
+import edu.usfca.tarprobe.common.Entity.Type;
 import org.apache.commons.lang3.tuple.Pair;
 
 import java.util.ArrayList;
@@ -15,10 +17,6 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class qSPQ {
-  public enum Type {
-    Hi, Lo;
-  }
-
 
   class Packet {
     public Type type;
@@ -177,7 +175,7 @@ public class qSPQ {
   }
 
   static Type getAntiType(Type t) {
-    return t == Type.Hi ? Type.Lo : Type.Hi;
+    return t == Entity.Type.Hi ? Entity.Type.Lo : Entity.Type.Hi;
   }
 
   private Packet getNext(int t, Params params, Type typePOI) {
@@ -185,7 +183,7 @@ public class qSPQ {
     // A new packet arrives at time t.
     Packet p = new Packet(t, params.TIME_TO_PROCESS);
     if (t <= params.initTrain) {
-      p.type = Type.Hi; // Initial train is always of high type.
+      p.type = Entity.Type.Hi; // Initial train is always of high type.
     } else {
       if ((t - params.initTrain) % params.GROUP_LENGTH == 0) {
         p.type = typePOI;
@@ -200,8 +198,8 @@ public class qSPQ {
   private State getCurrentState(int t, Packet p, Params params, Map<Type, Queue<Packet>> pq, Queue<Packet> currentQ) {
     State st = new State(t <= params.initTrain ? -t : (t - params.initTrain) % params.GROUP_LENGTH, //
       p.type, p.ofInterest,//
-      pq.get(Type.Hi),//
-      pq.get(Type.Lo),//
+      pq.get(Entity.Type.Hi),//
+      pq.get(Entity.Type.Lo),//
       currentQ == null ? -1 : currentQ.peek().timeToProcess, //
       currentQ == null ? null : currentQ.peek().type //
     );
@@ -230,7 +228,7 @@ public class qSPQ {
 
   public Summary simulateOnce(Params params, Type typePOI, int maxT, boolean verbose, boolean suppress) {
     Map<Type, Queue<Packet>> pq = new HashMap<>();
-    for (Type type : Type.values()) {
+    for (Type type : Entity.Type.values()) {
       pq.put(type, new LinkedList<>());
     }
 
@@ -276,10 +274,10 @@ public class qSPQ {
 
       // Process next packet.
       if (currentQ == null) {
-        if (pq.get(Type.Hi).size() > 0) { // peek High packet.
-          currentQ = pq.get(Type.Hi);
-        } else if (pq.get(Type.Lo).size() > 0) { // peek Low packet.
-          currentQ = pq.get(Type.Lo);
+        if (pq.get(Entity.Type.Hi).size() > 0) { // peek High packet.
+          currentQ = pq.get(Entity.Type.Hi);
+        } else if (pq.get(Entity.Type.Lo).size() > 0) { // peek Low packet.
+          currentQ = pq.get(Entity.Type.Lo);
         }
       }
 
